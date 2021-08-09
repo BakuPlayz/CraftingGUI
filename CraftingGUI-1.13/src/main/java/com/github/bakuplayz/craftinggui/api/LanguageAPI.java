@@ -146,71 +146,46 @@ public final class LanguageAPI {
         HELP_ITEM_PERMISSION("help", "itemPermission", "%permission%"),
 
         COLOR_PICKER_ITEM_NAME("settings", "colorPickerItemName"),
-
         ADMIN_SETTINGS_ITEM_NAME("settings", "adminSettingsItemName"),
-
         COLOR_PICKER_STATUS("settings", "colorPickerStatus", "%status%"),
-
         MULTI_CHOICE_STATUS("settings", "multiChoiceStatus", "%status%"),
-
         TABLE_CHOICE_STATUS("settings", "tableChoiceStatus", "%status%"),
 
         MANAGE_RECIPES_ITEM_NAME("adminSettings", "manageRecipesItemName"),
-
         RELOAD_RECIPES_ITEM_NAME("adminSettings", "reloadRecipesItemName"),
-
         UPDATE_SETTINGS_ITEM_NAME("adminSettings", "updateSettingsItemName"),
 
         MESSAGE_ENABLED("updateSettings", "messageEnabled"),
-
         MESSAGE_DISABLED("updateSettings", "messageDisabled"),
-
         PLAYER_MESSAGE_ITEM_NAME("updateSettings", "playerMessageItemName"),
-
         CONSOLE_MESSAGE_ITEM_NAME("updateSettings", "consoleMessageItemName"),
-
         PLAYER_MESSAGE_STATUS("updateSettings", "playerMessageStatus", "%status%"),
-
         CONSOLE_MESSAGE_STATUS("updateSettings", "consoleMessageStatus", "%status%"),
 
         NEW_UPDATE("updateSettings", "newUpdate"),
-
         NO_NEW_UPDATE("updateSettings", "noNewUpdate"),
-
         UPDATE_STATUS_ITEM_NAME("updateSettings", "updateStatusItemName"),
-
         UPDATE_STATUS("updateSettings", "updateStatus", "%status%"),
 
         COLOR_ITEM_NAME("colorPicker", "colorItemName", "%color%"),
 
         BAN_ITEM_NAME("manageRecipe", "banItemName"),
-
         RECIPE_BANNED("manageRecipe", "recipeBanned"),
-
         RECIPE_NOT_BANNED("manageRecipe", "recipeNotBanned"),
 
         RESULT_HEADER("menuItem", "resultHeader"),
-
         RESULT_NAME("menuItem", "resultName", "%name%"),
-
         INGREDIENTS_HEADER("menuItem", "ingredientHeader"),
-
         INGREDIENT_NAME("menuItem", "ingredientName", "%name%"),
 
         CAN_CRAFT_X("craftItem", "canCraftX", "%x%"),
-
         CAN_CRAFT_MAX("craftItem", "canCraftMax"),
-
         CANNOT_CRAFT_X("craftItem", "cannotCraftX", "%x%"),
-
         CANNOT_CRAFT_MAX("craftItem", "cannotCraftMax"),
-
         CRAFT_X_ITEM_NAME("craftItem", "craftXItemName", "%x%"),
-
         CRAFT_MAX_ITEM_NAME("craftItem", "craftMaxItemName"),
 
         GLASS_ITEM_NAME("craftingTable", "glassItemName"),
-
         RESULTS_ITEM_NAME("craftingTable", "resultsItemName");
 
         private final String key;
