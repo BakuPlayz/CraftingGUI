@@ -1,0 +1,49 @@
+# Created on 2021-08-09T15:34:12.638
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:853)
+
+
+# Created on 2021-08-09T15:34:13.430
+Unexpected IOException: 6,1,com.github.bakuplayz.craftinggui.items.MenuItemTests,testItem(com.github.bakuplayz.craftinggui.items.MenuItemTests),null,null,null
+
+
+# Created on 2021-08-09T15:34:13.432
+Unexpected IOException: 5,1,com.github.bakuplayz.craftinggui.items.MenuItemTests,testMenuItem(com.github.bakuplayz.craftinggui.items.MenuItemTests),null,null,null
+
+
+# Created on 2021-08-09T15:34:13.472
+Unexpected IOException: 6,1,com.github.bakuplayz.craftinggui.items.MenuItemTests,testMenuItem(com.github.bakuplayz.craftinggui.items.MenuItemTests),null,null,null
+
+
+# Created on 2021-08-09T15:34:13.473
+Unexpected IOException: 5,1,com.github.bakuplayz.craftinggui.items.MenuItemTests,testItemEnchantments(com.github.bakuplayz.craftinggui.items.MenuItemTests),null,null,null
+
+
+# Created on 2021-08-09T15:34:13.924
+Unexpected IOException: 6,1,com.github.bakuplayz.craftinggui.items.MenuItemTests,testItemEnchantments(com.github.bakuplayz.craftinggui.items.MenuItemTests),null,null,null
+
+
+# Created on 2021-08-09T15:34:13.925
+Unexpected IOException: 5,1,com.github.bakuplayz.craftinggui.items.MenuItemTests,testItemDisplayName(com.github.bakuplayz.craftinggui.items.MenuItemTests),null,null,null
+
+
+# Created on 2021-08-09T15:34:14.227
+Unexpected IOException: 6,1,com.github.bakuplayz.craftinggui.items.MenuItemTests,testItemDisplayName(com.github.bakuplayz.craftinggui.items.MenuItemTests),null,null,null
+
+
+# Created on 2021-08-09T15:34:14.228
+Unexpected IOException: 5,1,com.github.bakuplayz.craftinggui.items.MenuItemTests,testItemLore(com.github.bakuplayz.craftinggui.items.MenuItemTests),null,null,null
+
+
+# Created on 2021-08-09T15:34:14.366
+Unexpected IOException: 6,1,com.github.bakuplayz.craftinggui.items.MenuItemTests,testItemLore(com.github.bakuplayz.craftinggui.items.MenuItemTests),null,null,null
+
+
+# Created on 2021-08-09T15:34:14.366
+Unexpected IOException: 5,1,com.github.bakuplayz.craftinggui.items.MenuItemTests,testItemMeta(com.github.bakuplayz.craftinggui.items.MenuItemTests),null,null,null
+
+

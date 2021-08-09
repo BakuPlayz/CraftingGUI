@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: craftinggui.recipe.RecipeManagerTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in craftinggui.recipe.RecipeManagerTests
+testLoadingRecipes(craftinggui.recipe.RecipeManagerTests)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.RuntimeException: Failed to instantiate plugin
+	at craftinggui.recipe.RecipeManagerTests.setUp(RecipeManagerTests.java:27)
+Caused by: java.lang.reflect.InvocationTargetException
+	at craftinggui.recipe.RecipeManagerTests.setUp(RecipeManagerTests.java:27)
+Caused by: be.seeseemelk.mockbukkit.UnimplementedOperationException: Not implemented
+	at craftinggui.recipe.RecipeManagerTests.setUp(RecipeManagerTests.java:27)
+

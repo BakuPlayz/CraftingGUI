@@ -1,0 +1,31 @@
+name: CraftingGUI
+author: Bakuplayz
+version: 1.2.6
+main: com.github.bakuplayz.craftinggui.CraftingGUI
+api-version: 1.13
+
+commands:
+  craftinggui:
+    usage: /<command> []
+    aliases: [ cg ]
+    description: Base command for the plugin CraftingGUI.
+
+permissions:
+  craftinggui.*:
+    description: Permission to use everything in CraftingGUI.
+    default: op
+  craftinggui.help:
+    description: Permission to use the help command.
+    default: op
+  craftinggui.manage:
+    description: Permission to ban/pardon a recipe via the manage recipe gui.
+    default: op
+  craftinggui.reload:
+    description: Permission to use the reload command.
+    default: op
+  craftinggui.reset:
+    description: Permission to use the reset command.
+    default: op
+  craftinggui.update-message:
+    description: Permission to enable/disable the update message.
+    default: op
