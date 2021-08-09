@@ -60,7 +60,7 @@ public final class UpdateUtil {
             this.latestBody = fetchedData.get("body").getAsString();
             this.latestName = fetchedData.get("name").getAsString();
             this.latestURL = fetchedData.get("html_url").getAsString();
-            this.latestVersion = fetchedData.get("tag_name").getAsString();
+            this.latestVersion = fetchedData.get("tag_name").getAsString().replace("v", "");
 
             reader.close();
         } catch (Exception e) {
