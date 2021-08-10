@@ -6,8 +6,6 @@
 ![plugin_issues](https://img.shields.io/github/issues/BakuPlayz/CraftingGUI?color=teal&style=for-the-badge)
 ![lines_of_code](https://img.shields.io/tokei/lines/github/Bakuplayz/CraftingGUI?color=teal&style=for-the-badge)
 
-This plugin is aimed at making your crafting experience both faster, and also customizable.
-
 # Features
 - **Multi Crafting Menu**: A menu which allows you to craft a full inventory, within about 2 to 15 milliseconds.
 - **Crafting Table Menu**: A menu which allows you to have a default crafting experience with some custom selectable glass.
