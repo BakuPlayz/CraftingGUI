@@ -12,6 +12,11 @@
 - **Settings Menu**: A menu-system which allows you to enable/disable the Multi Crafting/Crafting Table menu and more.
 - **Manage Menu**: A menu which allows you to enable/disable spesific recipes.
 
+# What version should I get?
+- **Legacy**:jar are for server versions 1.8 to 1.12.2.
+- **Middle**:jar are for server versions 1.13 to 1.13.2.
+- **Latest**:jar are for server versions 1.14+.
+
 # Java Issues?
 - **Legacy versions** (1.8 - 1.12.2) require Java 8 or newer to run.
 - **Middle versions** (1.13 - 1.13.2) require Java 10 or newer to run.
