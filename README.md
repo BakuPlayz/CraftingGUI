@@ -19,7 +19,7 @@
 
 # Issues
 
-Are you experiencing a bug or just want an feature to be added? Then please head over to the issues tab, where you firstly look-around and see wheater or not the issue(s) already been reported. If it's not yet been created, then please go-ahead and pick either bug or feature report depending on your issue(s). Also, if you don't have a github account or have any issues with reporting then please head over to the [discord server](https://discord.gg/HqQqz2Z) and report it over there.
+Are you experiencing a bug or just want an feature to be added? Then please head over to the [issues tab](https://github.com/BakuPlayz/CraftingGUI/issues), where you firstly look-around and see wheater or not the issue(s) already been reported. If it's not yet been created, then please go-ahead and pick either bug or feature report depending on your issue(s). Also, if you don't have a github account or have any issues with reporting then please head over to the [discord server](https://discord.gg/HqQqz2Z) and report it over there.
 
 # Branches
 
