@@ -4,7 +4,7 @@
 ![spigot_downloads](https://img.shields.io/spiget/downloads/72420?color=teal&style=for-the-badge)
 ![spigot_stars](https://img.shields.io/spiget/stars/72420?color=teal&style=for-the-badge)
 ![plugin_issues](https://img.shields.io/github/issues/BakuPlayz/CraftingGUI?color=teal&style=for-the-badge)
-![lines_of_code](https://img.shields.io/tokei/lines/github/Bakuplayz/CraftingGUI?color=teal&style=for-the-badge)
+![lines_of_code](https://img.shields.io/tokei/lines/github/BakuPlayz/CraftingGUI?color=teal&style=for-the-badge)
 
 # Features
 - **Multi Crafting Menu**: A menu which allows you to craft a full inventory, within about 2 to 15 milliseconds.
