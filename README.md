@@ -1,8 +1,8 @@
 # CraftingGUI
  
 ![latest_version](https://img.shields.io/spiget/version/72420?label=version&color=teal&style=for-the-badge)
-![spigot_stars](https://img.shields.io/spiget/stars/72420?color=teal&style=for-the-badge)
 ![spigot_downloads](https://img.shields.io/spiget/downloads/72420?color=teal&style=for-the-badge)
+![spigot_stars](https://img.shields.io/spiget/stars/72420?color=teal&style=for-the-badge)
 ![plugin_issues](https://img.shields.io/github/issues/BakuPlayz/CraftingGUI?color=teal&style=for-the-badge)
 ![lines_of_code](https://img.shields.io/tokei/lines/github/Bakuplayz/CraftingGUI?color=teal&style=for-the-badge)
 
