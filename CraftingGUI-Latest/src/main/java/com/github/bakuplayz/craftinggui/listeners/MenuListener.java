@@ -28,7 +28,7 @@ public final class MenuListener implements Listener {
         this.plugin = plugin;
     }
 
-    @EventHandler(priority = EventPriority.HIGHEST)
+    @EventHandler(priority = EventPriority.LOW)
     public void onMenuClick(final @NotNull InventoryClickEvent event) {
         InventoryHolder holder = event.getInventory().getHolder();
         if (!(holder instanceof DefaultMenu)) return;
@@ -67,7 +67,7 @@ public final class MenuListener implements Listener {
         menu.handleMenu(event);
     }
 
-    @EventHandler(priority = EventPriority.HIGHEST)
+    @EventHandler(priority = EventPriority.LOW)
     public void onMenuDrag(final @NotNull InventoryDragEvent event) {
         InventoryHolder holder = event.getInventory().getHolder();
         if (holder instanceof DefaultMenu) {
@@ -75,7 +75,7 @@ public final class MenuListener implements Listener {
         }
     }
 
-    @EventHandler(priority = EventPriority.HIGHEST)
+    @EventHandler(priority = EventPriority.LOW)
     public void onMenuClose(final @NotNull InventoryCloseEvent event) {
         InventoryHolder holder = event.getInventory().getHolder();
         if (holder instanceof CraftingTableMenu) {
