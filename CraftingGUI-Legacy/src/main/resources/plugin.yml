@@ -6,7 +6,7 @@ main: com.github.bakuplayz.craftinggui.CraftingGUI
 commands:
   craftinggui:
     usage: /<command> []
-    aliases: [ cg ]
+    aliases: [crafting, cg]
     description: Base command for the plugin CraftingGUI.
 
 permissions:
