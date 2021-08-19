@@ -28,9 +28,10 @@ Are you experiencing a bug or just want an feature to be added? Then please head
 
 # Branches
 
-- release -> the latest code (used for full-releases)
+- release -> the latest release code (used for full-releases)
+- hotfix -> the current hotfix code (used for hotfix-releases)
 - beta -> the current beta code (used for beta-releases)
-- hotfix -> the current hotfix code (used for hotfix-relases)
+- development -> the latest code (used for testing)
 
 # Contributions
 
