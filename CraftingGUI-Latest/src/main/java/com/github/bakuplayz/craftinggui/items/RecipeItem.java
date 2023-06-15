@@ -1,6 +1,7 @@
 package com.github.bakuplayz.craftinggui.items;
 
 import com.github.bakuplayz.craftinggui.CraftingGUI;
+import com.github.bakuplayz.craftinggui.utils.CraftUtil;
 import com.github.bakuplayz.craftinggui.utils.ItemUtil;
 import com.github.bakuplayz.craftinggui.utils.NameUtil;
 import lombok.Getter;
@@ -115,12 +116,12 @@ public final class RecipeItem {
         return !choices.isEmpty();
     }
 
-    public boolean matchesChoice(final ItemStack item) {
+    public boolean matchesChoice(ItemStack item) {
         if (!hasChoice()) return false;
         for (RecipeChoice choice : choices.values()) {
             if (choice == null && item == null) return true;
             if (choice == null ^ item == null) continue;
-            if (choice.test(item)) return true;
+            if (CraftUtil.isSimilar(choice, item)) return true;
         }
         return false;
     }

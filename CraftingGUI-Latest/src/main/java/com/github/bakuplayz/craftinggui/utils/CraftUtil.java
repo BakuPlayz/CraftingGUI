@@ -10,7 +10,6 @@ import org.bukkit.inventory.RecipeChoice;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -39,16 +38,50 @@ public final class CraftUtil {
         this.maxedResult = new ItemUtil(result, resultMaxStackSize).toItemStack();
     }
 
-    public boolean containsChoiceIngredients(final RecipeChoice choice, final ItemStack ingredient, final int amount) {
+    public boolean containsChoiceIngredients(RecipeChoice choice, ItemStack ingredient, int amount) {
         int ingredientAmount = 0;
         for (ItemStack item : playerInventory.getStorageContents()) {
             if (item == null || item.getType() == Material.AIR) continue;
+            if (!isSimilar(choice, item)) continue;
             if (choice.test(item)) ingredientAmount += item.getAmount();
         }
         return ingredientAmount >= ingredient.getAmount() * amount;
     }
 
-    public boolean containsIngredients(final int amount) {
+    private boolean containsAtLeast(@NotNull Inventory inventory, ItemStack item, int amount) {
+        int itemAmount = 0;
+
+        for (ItemStack inventoryItem : inventory.getContents()) {
+            if (inventoryItem == null || inventoryItem.getType() == Material.AIR) {
+                continue;
+            }
+
+            if (!isSimilar(item, inventoryItem)) {
+                continue;
+            }
+
+            itemAmount += inventoryItem.getAmount();
+        }
+
+        return itemAmount >= amount;
+    }
+
+    public static boolean isSimilar(@NotNull ItemStack first, @NotNull ItemStack second) {
+        if (first.hasItemMeta() == second.hasItemMeta()) {
+            if (!Bukkit.getItemFactory().equals(first.getItemMeta(), second.getItemMeta())) {
+                return false;
+            }
+        }
+
+        return first.isSimilar(second);
+    }
+
+    public static boolean isSimilar(@NotNull RecipeChoice choice, @NotNull ItemStack item) {
+        ItemStack choiceItem = ((RecipeChoice.MaterialChoice) choice).getItemStack();
+        return isSimilar(choiceItem, item);
+    }
+
+    public boolean containsIngredients(int amount) {
         List<RecipeChoice> choices = new ArrayList<>();
         List<ItemStack> ingredients = new ArrayList<>();
 
@@ -61,7 +94,9 @@ public final class CraftUtil {
                     ingredients.add(ingredient);
                 }
                 if (!containsChoiceIngredients(choice, ingredient, amount) &&
-                        !playerInventory.containsAtLeast(ingredient, ingredient.getAmount() * amount)) return false;
+                        !containsAtLeast(playerInventory, ingredient, ingredient.getAmount() * amount)) {
+                    return false;
+                }
             }
         }
 
@@ -69,10 +104,11 @@ public final class CraftUtil {
             for (ItemStack foundIngredient : ingredients) {
                 for (ItemStack ingredient : recipeItem.getIngredients()) {
                     if (foundIngredient == ingredient) continue;
-                    if (!playerInventory.containsAtLeast(ingredient, ingredient.getAmount() * amount)) return false;
+                    if (!containsAtLeast(playerInventory, ingredient, ingredient.getAmount() * amount)) return false;
                 }
             }
         }
+
         return true;
     }
 

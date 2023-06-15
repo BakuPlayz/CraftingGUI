@@ -152,6 +152,7 @@ public final class CraftItemMenu extends DefaultMenu {
             }
             break;
         }
+
         updateMenu();
     }
 

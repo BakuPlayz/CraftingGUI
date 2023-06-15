@@ -334,7 +334,7 @@ public final class CraftingTableMenu extends DefaultMenu implements Listener {
         if (!recipeItem.matchesChoice(second)) {
             if (first == null && second == null) return true;
             if (first == null ^ second == null) return false;
-            return first.isSimilar(second);
+            return CraftUtil.isSimilar(first,second);
         }
         return recipeItem.matchesChoice(first) && recipeItem.matchesChoice(second);
     }
