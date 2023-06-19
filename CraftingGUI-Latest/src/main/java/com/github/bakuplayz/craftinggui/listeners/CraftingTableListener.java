@@ -5,6 +5,8 @@ import com.github.bakuplayz.craftinggui.menu.menus.CraftingTableMenu;
 import com.github.bakuplayz.craftinggui.menu.menus.MultiCraftingMenu;
 import com.github.bakuplayz.craftinggui.settings.PlayerSettings;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -23,16 +25,21 @@ public final class CraftingTableListener implements Listener {
     private final CraftingGUI plugin;
     private final PlayerSettings playerSettings;
 
-    public CraftingTableListener(final @NotNull CraftingGUI plugin) {
+    public CraftingTableListener(@NotNull CraftingGUI plugin) {
         this.plugin = plugin;
         this.playerSettings = plugin.getPlayerSettings();
     }
 
     @EventHandler
-    public void onInteractWithTable(final @NotNull PlayerInteractEvent event) {
+    public void onInteractWithTable(@NotNull PlayerInteractEvent event) {
+        if (event.getClickedBlock() == null) return;
         if (event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
-        if (event.getClickedBlock() == null || event.getClickedBlock().getType() != Material.CRAFTING_TABLE) return;
+        if (event.getClickedBlock().getType() != Material.CRAFTING_TABLE) return;
         event.setCancelled(true);
+
+        if (isSlimeFunTable(event.getClickedBlock())) {
+            return;
+        }
 
         Player player = event.getPlayer();
         if (playerSettings.isNotRegistered(player)) {
@@ -64,5 +71,32 @@ public final class CraftingTableListener implements Listener {
                 player.openWorkbench(player.getLocation(), true);
                 break;
         }
+    }
+
+
+    public boolean isSlimeFunTable(@NotNull Block table) {
+        Block below = table.getRelative(BlockFace.DOWN);
+        Block north = table.getRelative(BlockFace.NORTH);
+        Block west = table.getRelative(BlockFace.WEST);
+        Block east = table.getRelative(BlockFace.EAST);
+        Block south = table.getRelative(BlockFace.SOUTH);
+
+        if (below.getType() == Material.DISPENSER) {
+            return true;
+        }
+
+        if (north.getType() == Material.DISPENSER) {
+            return true;
+        }
+
+        if (west.getType() == Material.DISPENSER) {
+            return true;
+        }
+
+        if (east.getType() == Material.DISPENSER) {
+            return true;
+        }
+
+        return south.getType() == Material.DISPENSER;
     }
 }

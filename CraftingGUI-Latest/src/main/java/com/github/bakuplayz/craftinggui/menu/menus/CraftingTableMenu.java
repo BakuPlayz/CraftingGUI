@@ -327,7 +327,7 @@ public final class CraftingTableMenu extends DefaultMenu implements Listener {
     private boolean isSimilar(ItemStack first, RecipeChoice second) {
         if (first == null && second == null) return true;
         if (first == null ^ second == null) return false;
-        return second.test(first);
+        return CraftUtil.isSimilar(second, first);
     }
 
     private boolean isSimilar(ItemStack first, ItemStack second) {
