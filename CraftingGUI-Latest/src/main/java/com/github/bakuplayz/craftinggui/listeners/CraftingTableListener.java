@@ -1,18 +1,20 @@
 package com.github.bakuplayz.craftinggui.listeners;
 
 import com.github.bakuplayz.craftinggui.CraftingGUI;
+import com.github.bakuplayz.craftinggui.addons.SlimefunAddon;
 import com.github.bakuplayz.craftinggui.menu.menus.CraftingTableMenu;
 import com.github.bakuplayz.craftinggui.menu.menus.MultiCraftingMenu;
 import com.github.bakuplayz.craftinggui.settings.PlayerSettings;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
-import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.jetbrains.annotations.NotNull;
+
 
 /**
  * (DESCRIPTION)
@@ -73,30 +75,12 @@ public final class CraftingTableListener implements Listener {
         }
     }
 
-
-    public boolean isSlimeFunTable(@NotNull Block table) {
-        Block below = table.getRelative(BlockFace.DOWN);
-        Block north = table.getRelative(BlockFace.NORTH);
-        Block west = table.getRelative(BlockFace.WEST);
-        Block east = table.getRelative(BlockFace.EAST);
-        Block south = table.getRelative(BlockFace.SOUTH);
-
-        if (below.getType() == Material.DISPENSER) {
-            return true;
+    private boolean isSlimeFunTable(Block block) {
+        if (!Bukkit.getPluginManager().isPluginEnabled("Slimefun")) {
+            return false;
         }
 
-        if (north.getType() == Material.DISPENSER) {
-            return true;
-        }
-
-        if (west.getType() == Material.DISPENSER) {
-            return true;
-        }
-
-        if (east.getType() == Material.DISPENSER) {
-            return true;
-        }
-
-        return south.getType() == Material.DISPENSER;
+        return SlimefunAddon.isSlimefunBlock(block);
     }
+
 }

@@ -3,6 +3,7 @@ author: Bakuplayz
 version: ${project.version}
 main: com.github.bakuplayz.craftinggui.CraftingGUI
 api-version: 1.14
+softdepend: [slimefun]
 
 commands:
   craftinggui:
